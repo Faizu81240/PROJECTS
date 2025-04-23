@@ -1,0 +1,207 @@
+*{
+    font-family: 'Montserrat';
+}
+
+body{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #212121e6;
+    padding-bottom: 50px;
+}
+
+.chatHero{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    position: relative;
+}
+
+.contentTitle{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    color: #FFF;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 20px 0;
+    width: auto;
+}
+
+.inputContainer{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px; 
+    background: #373737 ;
+    height: 100px;
+    position: sticky;
+    bottom: 0;
+}
+
+.inputField{
+    display: flex;
+    width: 80%;
+    min-height: 68px;
+    padding: 0px 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: #414141;
+}
+
+.inputBox::placeholder {
+    justify-content: center;
+    color: #888;
+    font-size: 18px;
+    opacity: 1;
+}
+
+.inputField .inputBox {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    height: 100%;
+    font-size: 18px;
+}
+
+.sendButton {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.sendImg {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.heroDisclaimer{
+    color: #9A9B9F;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.inputBottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.conversation{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 30px;
+    margin: 0;
+    width: 80%;
+
+}
+
+.conversation::-webkit-scrollbar {
+    width: 6px;
+}
+
+.conversation::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+
+.userPromptText{
+    display: flex;
+    padding: 20px 32px;
+    align-self: flex-end;
+    display: inline-block;
+    color: #FFF;
+    background: #201c1c ;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+    border-radius: 24px;
+    border-bottom-right-radius: 0;
+    max-width: 75%;
+}
+
+.gptResponseText{
+    display: flex;
+    padding: 20px 32px;
+    align-self: flex-start;
+    display: inline-block;
+    color: #FFF;
+    background: #414141 ;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+    width: auto;
+    flex-shrink: 1;
+    border-radius: 24px ;
+    max-width: 75%;
+    border-bottom-left-radius: 0;
+}
+
+.gptResponseText code {
+    background-color: #2a2a2a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.gptResponseText pre {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: monospace;
+}
+
+
+@media (max-width: 800px) {
+    .gptResponseText{
+        font-size: 14px;   
+        padding: 16px 24px;
+    }
+
+    .userPromptText{
+        font-size: 14px;
+        padding: 16px 24px;
+    }
+
+    .conversation{
+        width: 90%;
+    }
+
+    .contentTitle{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+  }
+  
