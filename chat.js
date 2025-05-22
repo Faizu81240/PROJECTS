@@ -1,4 +1,4 @@
-const apiKey = "AIzaSyC4O56uFVqCAfuhQ5Woj18IdMPyqhPd0hI"
+const apiKey = "API"
 
 const apiCall = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
